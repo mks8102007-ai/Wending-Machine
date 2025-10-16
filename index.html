@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vending Machine</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>VENDING MACHINE</h1>
+
+  <div class="vending-machine">
+
+    <h2>Chocolates</h2>
+    <div class="row">
+      <div class="product" data-item="Dairy Milk" data-price="20">Dairy Milk :Rs.20</div>
+      <div class="product" data-item="Milky Bar" data-price="20">Milky Bar :Rs.20</div>
+      <div class="product" data-item="Munch" data-price="10">Munch :Rs.10</div>
+      <div class="product" data-item="KitKat" data-price="20">KitKat :Rs.20</div>
+    </div>
+
+    <h2>Snacks</h2>
+    <div class="row">
+      <div class="product" data-item="Lays" data-price="30">Lays :Rs.30</div>
+      <div class="product" data-item="Kurkure" data-price="20">Kurkure :Rs.20</div>
+      <div class="product" data-item="Bingo" data-price="20">Bingo :Rs.20</div>
+      <div class="product" data-item="Mad angles" data-price="30">Mad angles :Rs.30</div>
+    </div>
+
+    <h2>Milkshakes</h2>
+    <div class="row">
+      <div class="product" data-item="Oreo Shake" data-price="50">Oreo Shake :Rs.50</div>
+      <div class="product" data-item="Chocolate Shake" data-price="50">Chocolate Shake :Rs.50</div>
+      <div class="product" data-item="Butterscoach shake" data-price="50">Butterscoach shake :Rs.50</div>
+      <div class="product" data-item="Strawberry Shake" data-price="50">Strawberry Shake :Rs.50</div>
+    </div>
+
+    <h2>Juices</h2>
+    <div class="row">
+      <div class="product" data-item="Mango Juice" data-price="30">Mango Juice :Rs.30</div>
+      <div class="product" data-item="Apple Juice" data-price="30">Apple Juice : Rs.30</div>
+      <div class="product" data-item="Orange Juice" data-price="30">Orange Juice : Rs.30</div>
+      <div class="product" data-item="Grape Juice" data-price="30">Grape Juice :Rs.30</div>
+    </div>
+
+  </div>
+
+  <div class="display">
+    <p>Current Balance: Rs.<span id="balance">0</span></p>
+    <p id="message">Please insert money.</p>
+  </div>
+
+  <div class="buttons">
+    <input type="number" id="moneyinput" placeholder="Enter amount">
+    <button id="insertbutton">Insert Money</button>
+    <button id="purchasebutton">Purchase</button>
+    <button id="returnchangebutton">Return Change</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

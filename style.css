@@ -1,0 +1,78 @@
+body {
+  font-family: Arial,sans-serif;
+  background: linear-gradient(135deg, #0b0146, #770808);
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  color: #510a3e;
+  text-shadow: 2px #175851;
+}
+
+.vending-machine {
+  background-color: #87e39b;
+  color: rgb(103, 43, 43);
+  border-radius: 15px;
+  padding: 20px;
+  width: 80%;
+  margin: 0 auto;
+  box-shadow: 15px rgba(0,0,0,0.4);
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.product {
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  padding: 10px;
+  width: 150px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.product:hover {
+  background-color: #b2dfdb;
+  transform: scale(auto);
+}
+
+.display {
+  background-color: white;
+  width: 50%;
+  margin: 20px auto;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 10px rgba(0,0,0,0.3);
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+input[type="number"] {
+  padding: 10px;
+  width: 150px;
+  border-radius: 5px;
+  border: 2px solid #004d40;
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 8px;
+  background-color: #00796b;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #004d40;
+}
