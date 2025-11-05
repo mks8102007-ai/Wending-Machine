@@ -14,11 +14,24 @@ products.forEach(product => {
   product.addEventListener("click", () => {
     const name = product.dataset.item;
     const price = parseInt(product.dataset.price);
+    let stock=parseInt(product.dataset.stock);
+    const stockDisplay = product.querySelector(".stock");
+
+    if(stock<=0){
+      message.textcontent=`${name}is out of stock`;
+      product.Style.opacity="0.5";
+      return;
+    }
 
     if (cart[name]) {
+      if(cart[name].qty<stock){
       cart[name].qty++;
     } else {
-      cart[name] = { price: price, qty: 1 };
+      message.textContent=`${name}only has ${stock} left!`;
+      return;
+    }
+  }else{
+      cart[name]={price:price,qty:1};
     }
 
     totalCost += price;
@@ -49,8 +62,22 @@ purchaseButton.addEventListener("click", () => {
     balanceDisplay.textContent = balance;
 
     let summary = "Purchase successful\nItems bought:\n";
+
     for (let item in cart) {
       summary += `${item} *${cart[item].qty} = Rs.${cart[item].price * cart[item].qty}\n`;
+
+      const product=[...products].find(p=>p.dataset.item===item);
+      let stock=parseInt(product.dataset.stock);
+      stock-=cart[item].qty;
+      product.dataset.stock=stock;
+      
+      const stockLabel=product.querySelector(".stock");
+      if(stockLabel){
+        stockLabel.textContent=stock;
+      }
+      if(stock<=0){
+        product.style.opacity="0.5";
+      }
     }
 
     alert(summary + `\nRemaining balance: Rs.${balance}`);
